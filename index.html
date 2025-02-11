@@ -1,0 +1,664 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Oak Camp - Aventura en Vanuatu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <div class="logo-animation">
+          <img src="https://static.vecteezy.com/system/resources/previews/024/054/134/non_2x/angry-north-american-beaver-or-eurasian-beaver-biting-log-head-mascot-retro-vector.jpg" alt="Golden Oak Beaver Logo" class="beaver-logo">
+        </div>
+        <a href="index.html" style="text-decoration: none; color: inherit;">Golden Oak Camp</a>
+      </div>
+      <div class="nav-links">
+        <a href="#hero">Inicio</a>
+        <a href="#programa">Programa</a>
+        <a href="#excursiones">Excursiones</a>
+        <a href="#deportes">Deportes</a>
+        <a href="#precios">Precios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#tienda">Tienda</a>
+        <div class="auth-buttons">
+          <button onclick="openModal('login')" class="login-btn">Iniciar Sesión</button>
+          <button onclick="openModal('register')" class="register-btn">Registrarse</button>
+          <button class="user-profile-btn" onclick="toggleProfileDropdown()" style="display: none;">
+            <i class="fas fa-user user-profile-icon"></i>
+            <span class="user-name-display"></span>
+            <div class="user-profile-dropdown">
+              <ul>
+                <li><a href="#" onclick="logout()">Cerrar Sesión</a></li>
+                <li><a href="#" onclick="deleteAccount()" style="color: #ff4444;">Eliminar Cuenta</a></li>
+              </ul>
+            </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Nueva sección de introducción -->
+    <section id="introduccion" class="intro-section">
+      <div class="intro-container">
+        <h2 class="intro-title">Bienvenido a Golden Oak Camp en Vanuatu</h2>
+        <p class="intro-subtitle">Una experiencia única que combina aprendizaje, aventura y diversión</p>
+        
+        <div class="intro-grid">
+          <div class="intro-card">
+            <img src="https://images.pexels.com/photos/20211339/pexels-photo-20211339.jpeg?cs=srgb&dl=pexels-on-vixion-232224433-20211339.jpg&fm=jpg" alt="Clases de Inglés">
+            <h3>Aprende Inglés</h3>
+            <p>Mejora tu inglés con profesores nativos en un entorno internacional único</p>
+          </div>
+          
+          <div class="intro-card">
+            <img src="https://www.kiaoratravellers.com/wp-content/uploads/2021/11/PortadaToka.jpg" alt="Cultura Local">
+            <h3>Cultura Local</h3>
+            <p>Sumérgete en las tradiciones y costumbres únicas de Vanuatu</p>
+          </div>
+          
+          <div class="intro-card">
+            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Actividades Deportivas">
+            <h3>Deportes y Aventura</h3>
+            <p>Participa en emocionantes actividades deportivas y excursiones</p>
+          </div>
+        </div>
+
+        <div class="intro-features">
+          <div class="feature">
+            <i class="fas fa-graduation-cap"></i>
+            <h4>Inmersión en Inglés</h4>
+            <p>Aprende con profesores nativos</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <h4>Grupos Reducidos</h4>
+            <p>Máximo 10 estudiantes por grupo</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Seguridad Total</h4>
+            <p>Supervisión 24/7 y seguro incluido</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>7 Días Intensivos</h4>
+            <p>Programa completo de actividades</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hero">
+      <h1>¡Descubre Vanuatu con Golden Oak Camp!</h1>
+      <p>Una experiencia única de inmersión en inglés en el paraíso del Pacífico Sur</p>
+      <button onclick="openModal('info')" class="info-btn">Más Información</button>
+    </section>
+
+    <section id="programa">
+      <h2>Nuestro Programa</h2>
+      <div class="programa-info">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Ubicación</h3>
+          <p>Port Vila, Vanuatu</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Duración</h3>
+          <p>7 días</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-users"></i>
+          <h3>Edades</h3>
+          <p>De 14 a 18 años</p>
+        </div>
+      </div>
+
+      <div class="horario">
+        <h3>Horario Diario</h3>
+        <table>
+          <tr>
+            <th>Hora</th>
+            <th>Actividad</th>
+          </tr>
+          <tr>
+            <td>08:00</td>
+            <td>Despertar y aseo</td>
+          </tr>
+          <tr>
+            <td>08:30</td>
+            <td>Desayuno</td>
+          </tr>
+          <tr>
+            <td>09:30</td>
+            <td>Clases de inglés</td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td>Actividades deportivas</td>
+          </tr>
+          <tr>
+            <td>13:30</td>
+            <td>Almuerzo</td>
+          </tr>
+          <tr>
+            <td>15:00</td>
+            <td>Excursiones/Actividades</td>
+          </tr>
+          <tr>
+            <td>19:00</td>
+            <td>Tiempo libre/Duchas</td>
+          </tr>
+          <tr>
+            <td>20:00</td>
+            <td>Cena</td>
+          </tr>
+          <tr>
+            <td>21:00</td>
+            <td>Actividades nocturnas</td>
+          </tr>
+          <tr>
+            <td>22:30</td>
+            <td>Dormir</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="excursiones">
+      <h2>Excursiones en Vanuatu</h2>
+      <div class="excursiones-grid">
+        <div class="excursion-card">
+          <img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd" alt="Museo Nacional de Vanuatu">
+          <h3>Museo Nacional de Vanuatu</h3>
+          <p>Explora la fascinante historia y cultura de Vanuatu a través de sus artefactos y exhibiciones. Guías locales nos enseñarán en inglés sobre la rica herencia del país.</p>
+        </div>
+        <div class="excursion-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Mount_Yasur_eruption_2006%2C_Tanna_Island%2C_Vanuatu%2C_VAN_0516.jpg" alt="Volcán Monte Yasur">
+          <h3>Volcán Monte Yasur</h3>
+          <p>Excursión al volcán activo más accesible del mundo. Aprenderemos sobre geología y vulcanología mientras practicamos inglés en un entorno único.</p>
+        </div>
+        <div class="excursion-card">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/55/75/cf/nanda-blue-hole.jpg?w=900&h=500&s=1" alt="Blue Holes">
+          <h3>Blue Holes de Espíritu Santo</h3>
+          <p>Visita a las cristalinas piscinas naturales de agua dulce. Actividades de snorkel y educación sobre el ecosistema marino.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="deportes">
+      <h2>Actividades Acuáticas y Deportivas</h2>
+      <div class="deportes-grid">
+        <div class="deporte-card">
+          <img src="https://images.unsplash.com/photo-1544551763-8dd44758c2dd" alt="Snorkel">
+          <h3>Snorkel y Buceo</h3>
+          <p>Explora los arrecifes de coral más prístinos del Pacífico</p>
+        </div>
+        <div class="deporte-card">
+          <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1" alt="Voleibol Playa">
+          <h3>Voleibol Playa</h3>
+          <p>Disfruta de emocionantes partidos en nuestras playas paradisíacas mientras practicas inglés con otros campistas en un ambiente divertido y deportivo</p>
+        </div>
+        <div class="deporte-card">
+          <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f" alt="Surf">
+          <h3>Surf</h3>
+          <p>Clases de surf en las mejores playas</p>
+        </div>
+        <div class="deporte-card">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306" alt="Senderismo">
+          <h3>Senderismo</h3>
+          <p>Rutas por la selva tropical</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="instalaciones">
+      <h2>Nuestras Instalaciones</h2>
+      <div class="instalaciones-grid">
+        <div class="instalacion-card">
+          <img src="https://images.unsplash.com/photo-1520277739336-7bf67edfa768" alt="Alberca Dormitorio">
+          <div class="instalacion-info">
+            <h3>Alberca Dormitorio</h3>
+            <p>Amplia sala compartida con ambiente acogedor. Incluye:</p>
+            <ul>
+              <li>Literas cómodas y espaciosas</li>
+              <li>Taquillas individuales con llave</li>
+              <li>Zona de aseo compartida</li>
+              <li>Ventilación natural y ventiladores</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="instalacion-card">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Comedor">
+          <div class="instalacion-info">
+            <h3>Comedor Principal</h3>
+            <p>Amplio espacio climatizado con:</p>
+            <ul>
+              <li>Buffet internacional</li>
+              <li>Opciones vegetarianas y veganas</li>
+              <li>Zona de snacks 24/7</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="instalacion-card">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="Aulas">
+          <div class="instalacion-info">
+            <h3>Aulas de Estudio</h3>
+            <p>Espacios educativos modernos equipados con:</p>
+            <ul>
+              <li>Pizarras interactivas</li>
+              <li>Equipos multimedia</li>
+              <li>Aire acondicionado</li>
+              <li>Zonas de trabajo en grupo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="instalacion-card">
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7" alt="Piscina">
+          <div class="instalacion-info">
+            <h3>Área de Piscina</h3>
+            <p>Complejo acuático con:</p>
+            <ul>
+              <li>Zona de relax con tumbonas</li>
+              <li>Bar de zumos naturales</li>
+              <li>Vestuarios equipados</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="instalacion-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh4_YJj0WHX1lBkMo9uY5jytsD6VjEFXy41Q&s" alt="Zona Deportiva">
+          <div class="instalacion-info">
+            <h3>Instalaciones Deportivas</h3>
+            <p>Complejo deportivo completo con:</p>
+            <ul>
+              <li>Cancha multiusos</li>
+              <li>Campo de volleyball playa</li>
+              <li>Gimnasio equipado</li>
+              <li>Zona de deportes acuáticos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="instalacion-card">
+          <img src="https://images.unsplash.com/photo-1630395822970-acd6a691d97e" alt="Sala Común">
+          <div class="instalacion-info">
+            <h3>Sala Común</h3>
+            <p>Espacio de recreación con:</p>
+            <ul>
+              <li>Zona de juegos</li>
+              <li>Área de TV y cine</li>
+              <li>Rincón de lectura</li>
+              <li>WiFi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precios">
+      <h2>Precios y Servicios</h2>
+      <div class="pricing-table">
+        <div class="price-card">
+          <h3>Básico</h3>
+          <p class="price">1999€</p>
+          <ul>
+            <li>Vuelo Madrid-Vanuatu</li>
+            <li>7 días de alojamiento</li>
+            <li>Pensión completa</li>
+            <li>Clases de inglés</li>
+            <li>Material didáctico</li>
+            <li>Actividades básicas</li>
+          </ul>
+          <a href="reservar.html?plan=basico" class="btn-reservar">Reservar</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Premium</h3>
+          <p class="price">2499€</p>
+          <ul>
+            <li>Todo lo del plan básico</li>
+            <li>Traslados VIP</li>
+            <li>Todas las excursiones</li>
+            <li>Equipo de snorkel y deportivo</li>
+            <li>Seguro premium internacional</li>
+            <li>Kit de bienvenida exclusivo</li>
+          </ul>
+          <a href="reservar.html?plan=premium" class="btn-reservar">Reservar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="testimonios-carousel">
+        <!-- Los testimonios se cargarán dinámicamente con JavaScript -->
+      </div>
+      
+      <!-- Nuevo formulario para añadir testimonios -->
+      <div class="add-testimonial-section">
+        <h3>¡Comparte tu experiencia!</h3>
+        <form id="testimonialForm" class="testimonial-form">
+          <div class="form-group">
+            <input type="text" id="testimonialName" required placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <input type="number" id="testimonialAge" required min="14" max="18" placeholder="Tu edad">
+          </div>
+          <div class="form-group">
+            <textarea id="testimonialText" required placeholder="Cuéntanos tu experiencia..."></textarea>
+          </div>
+          <div class="form-group rating-group">
+            <label>Valoración:</label>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+          </div>
+          <button type="submit" class="submit-testimonial">Enviar Testimonio</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="tienda">
+      <h2>Tienda Golden Oak</h2>
+      <div class="shop-grid">
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Camiseta Golden Oak">
+          <h3>Camiseta Golden Oak Camp</h3>
+          <p class="price">25€</p>
+          <p>Camiseta oficial del campamento en varios colores</p>
+          <div class="product-controls">
+            <div class="quantity-control">
+              <label for="quantity-Camiseta-Golden-Oak-Camp">Cantidad:</label>
+              <input type="number" id="quantity-Camiseta-Golden-Oak-Camp" min="1" value="1">
+            </div>
+            <button class="btn-comprar" onclick="addToCart('Camiseta Golden Oak Camp', 25)">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b" alt="Gorra Golden Oak">
+          <h3>Gorra Golden Oak</h3>
+          <p class="price">20€</p>
+          <p>Gorra ajustable con el logo del campamento</p>
+          <div class="product-controls">
+            <div class="quantity-control">
+              <label for="quantity-Gorra-Golden-Oak">Cantidad:</label>
+              <input type="number" id="quantity-Gorra-Golden-Oak" min="1" value="1">
+            </div>
+            <button class="btn-comprar" onclick="addToCart('Gorra Golden Oak', 20)">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/all-over-print-backpack-white-right-67ab9afc02352.png" alt="Mochila Golden Oak Camp">
+          <h3>Mochila Aventura</h3>
+          <p class="price">45€</p>
+          <p>Mochila resistente al agua para excursiones</p>
+          <div class="product-controls">
+            <div class="quantity-control">
+              <label for="quantity-Mochila-Aventura">Cantidad:</label>
+              <input type="number" id="quantity-Mochila-Aventura" min="1" value="1">
+            </div>
+            <button class="btn-comprar" onclick="addToCart('Mochila Aventura', 45)">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carrito de compras -->
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <h2>Carrito de Compras</h2>
+          <div id="cart-items"></div>
+          <div id="cart-total"></div>
+        </div>
+      </div>
+
+      <!-- Botón flotante del carrito -->
+      <div id="cart-button" class="cart-floating-button">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="blur-notice" class="blur-notice">
+    <h2>🔒 Accede para descubrir toda la experiencia Golden Oak</h2>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Iniciar Sesión</h2>
+      <div class="modal-welcome">
+        <p>¡Bienvenido de nuevo a Golden Oak Camp!</p>
+        <p>Accede a tu cuenta para gestionar tus reservas y compras.</p>
+      </div>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Registro</h2>
+      <div class="modal-welcome">
+        <p>¡Únete a la aventura Golden Oak!</p>
+        <p>Crea tu cuenta para acceder a ofertas exclusivas y gestionar tus reservas.</p>
+      </div>
+      <form id="registerForm">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Contraseña" required>
+        <input type="password" placeholder="Confirmar Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="infoModal" class="info-modal">
+    <div class="info-modal-content">
+      <h2>Descubre la Experiencia Golden Oak en Vanuatu</h2>
+      
+      <div class="detailed-info">
+        <h3>🌴 Sobre el Destino</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5" alt="Vanuatu vista aérea" class="info-image">
+          <p>Vanuatu, un archipiélago en el Pacífico Sur, ofrece una combinación única de belleza natural, cultura fascinante y aventuras inolvidables. Nuestro campamento se encuentra en Port Vila, la vibrante capital del país, rodeado de playas cristalinas y vegetación tropical.</p>
+        </div>
+
+        <h3>📚 Programa Educativo</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="Clase de inglés" class="info-image">
+          <p>Las clases de inglés son impartidas por profesores nativos altamente cualificados en grupos reducidos de máximo 10 estudiantes. El programa está diseñado para maximizar el aprendizaje a través de la inmersión total, combinando clases formales con actividades prácticas y conversación natural durante todas las actividades diarias.</p>
+        </div>
+
+        <h3>🎓 Metodología</h3>
+        <div class="info-section">
+          <img src="https://img.freepik.com/foto-gratis/papeles-comerciales-naturaleza-muerta-varias-piezas-mecanismo_23-2149352652.jpg" alt="Metodología de enseñanza" class="info-image">
+          <ul>
+            <li>2 horas diarias de clase formal (9:30 - 11:30) enfocadas en gramática, vocabulario y pronunciación</li>
+            <li>Práctica constante durante actividades y excursiones con monitores nativos</li>
+            <li>Actividades de conversación diarias con locales</li>
+            <li>Proyectos culturales colaborativos sobre la historia y tradiciones de Vanuatu</li>
+            <li>Juegos y actividades nocturnas en inglés para reforzar lo aprendido</li>
+          </ul>
+        </div>
+
+        <h3>🏃‍♂️ Actividades y Excursiones</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d" alt="Actividades en Vanuatu" class="info-image">
+          <h4>Día 1 - Bienvenida y Orientación</h4>
+          <ul>
+            <li>15:00 - Visita guiada al Museo Nacional para conocer la historia y cultura de Vanuatu</li>
+            <li>20:00 - Ceremonia tradicional de bienvenida y danzas culturales</li>
+          </ul>
+
+          <h4>Día 2 - Aventura Marina</h4>
+          <ul>
+            <li>11:30 - Clases de surf personalizadas con instructores profesionales</li>
+            <li>15:00 - Snorkel guiado en los arrecifes de coral con biólogos marinos</li>
+            <li>20:00 - Taller de artesanía tradicional con maestros locales</li>
+          </ul>
+
+          <h4>Día 3 - Exploración Volcánica</h4>
+          <ul>
+            <li>11:30 - Preparación y briefing de seguridad</li>
+            <li>15:00 - Excursión al volcán Monte Yasur con guías geólogos expertos</li>
+            <li>20:00 - Noche de astronomía y leyendas locales</li>
+          </ul>
+
+          <h4>Día 4 - Aventura Acuática</h4>
+          <ul>
+            <li>11:30 - Expedición en kayak por manglares</li>
+            <li>15:00 - Visita a poblados tradicionales costeros</li>
+            <li>20:00 - Clases de cocina local y degustación</li>
+          </ul>
+
+          <h4>Día 5 - Naturaleza y Cultura</h4>
+          <ul>
+            <li>11:30 - Senderismo por la selva tropical con guías botánicos</li>
+            <li>15:00 - Visita a jardines tradicionales y aprendizaje de plantas medicinales</li>
+            <li>20:00 - Noche de juegos tradicionales</li>
+          </ul>
+
+          <h4>Día 6 - Deportes y Competencias</h4>
+          <ul>
+            <li>11:30 - Torneo de voleibol playa</li>
+            <li>15:00 - Competencias acuáticas y juegos en equipo</li>
+            <li>20:00 - Ceremonia de premiación y fiesta de despedida</li>
+          </ul>
+
+          <h4>Día 7 - Despedida</h4>
+          <ul>
+            <li>11:30 - Últimas actividades en la playa</li>
+            <li>15:00 - Preparación para el regreso</li>
+            <li>20:00 - Cena especial de despedida</li>
+          </ul>
+
+          <p><em>Nota: Todas las mañanas de 9:30 a 11:30 se dedican a las clases formales de inglés. Las actividades pueden ajustarse según las condiciones climáticas.</em></p>
+        </div>
+
+        <h3>🏠 Alojamiento en la Alberca</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1520277739336-7bf67edfa768" alt="Alberca dormitorio" class="info-image">
+          <ul>
+            <li>Espacios compartidos modernos y confortables con aire acondicionado</li>
+            <li>Áreas comunes de socialización con juegos y entretenimiento</li>
+            <li>Zonas de estudio tranquilas con recursos educativos</li>
+            <li>Servicio de lavandería incluido</li>
+            <li>Taquillas individuales con sistema de seguridad electrónico</li>
+            <li>Baños y duchas modernas separadas</li>
+            <li>Personal de limpieza y mantenimiento 24/7</li>
+            <li>Sistema de seguridad y vigilancia permanente</li>
+          </ul>
+        </div>
+
+        <h3>🍽️ Alimentación Completa</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Comedor" class="info-image">
+          <ul>
+            <li>Desayuno buffet (8:30 - 9:30)</li>
+            <li>Almuerzo adaptado según actividad - en campamento o picnic durante excursiones (13:30 - 15:00)</li>
+            <li>Cena temática con especialidades de diferentes culturas (20:00 - 21:00)</li>
+            <li>Estación de snacks saludables y frutas tropicales 24/7</li>
+            <li>Opciones vegetarianas, veganas y adaptadas a cualquier alergia o intolerancia</li>
+            <li>Agua purificada y bebidas saludables ilimitadas</li>
+            <li>Menús diseñados por nutricionistas especializados en adolescentes</li>
+          </ul>
+        </div>
+
+        <h3>👥 Equipo Profesional</h3>
+        <div class="info-section">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNI-NyQfsaKnJ0iEItr5fCNoYYu7TbmIXGyw&s" alt="Equipo profesional" class="info-image">
+          <ul>
+            <li>Profesores nativos certificados</li>
+            <li>Monitores bilingües especializados en actividades juveniles 24/7</li>
+            <li>Equipo médico permanente con enfermería en el campus</li>
+            <li>Guías locales certificados expertos en cultura y naturaleza</li>
+            <li>Coordinadores de actividades con experiencia internacional</li>
+            <li>Personal de seguridad profesional las 24 horas</li>
+            <li>Psicólogo juvenil disponible para apoyo emocional</li>
+            <li>Nutricionista y personal de cocina especializado</li>
+          </ul>
+        </div>
+
+        <h3>✈️ Servicios Incluidos</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05" alt="Servicios incluidos" class="info-image">
+          <ul>
+            <li>Vuelos directos desde Madrid</li>
+            <li>Seguro de viaje internacional con cobertura médica completa</li>
+            <li>Todas las comidas, snacks y bebidas no alcohólicas</li>
+            <li>Material didáctico personalizado y recursos digitales</li>
+            <li>Equipamiento deportivo y de seguridad profesional</li>
+            <li>Certificado oficial de nivel de inglés al finalizar</li>
+            <li>Álbum digital profesional con fotos y videos del campamento</li>
+            <li>Kit de bienvenida con productos locales y material necesario</li>
+          </ul>
+        </div>
+
+        <h3>🎯 Objetivos y Beneficios</h3>
+        <div class="info-section">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Objetivos y beneficios" class="info-image">
+          <ul>
+            <li>Mejora significativa del nivel de inglés en todas las áreas: speaking, listening, reading y writing</li>
+            <li>Inmersión cultural completa en un entorno seguro y controlado</li>
+            <li>Desarrollo de independencia y autonomía personal</li>
+            <li>Preparación práctica para futuros estudios internacionales</li>
+          </ul>
+        </div>
+
+        <h3>🌟 Garantía de Calidad</h3>
+        <div class="info-section">
+          <img src="https://img.freepik.com/vector-premium/verificacion-investigacion-control-calidad-satisfaccion-producto-verificacion-mejor-estandar-evaluacion-trato_566886-1970.jpg" alt="Garantía de calidad" class="info-image">
+          <ul>
+            <li>Programa certificado por instituciones educativas internacionales</li>
+            <li>Evaluación continua del progreso individual</li>
+            <li>Reportes diarios detallados para padres</li>
+            <li>Sistema de feedback continuo para mejora del programa</li>
+            <li>Compromiso con la seguridad y el bienestar de los estudiantes</li>
+            <li>Política de reembolso flexible</li>
+            <li>Atención personalizada 24/7 para padres y estudiantes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4dddad2dbf4d3dbd8d0d1dadbd5df9ad7dbd9">[email&#160;protected]</a></p>
+        <p>Teléfono: +34 912 345 678</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/goldenoak"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com/goldenoak"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/goldenoak"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Golden Oak Camp. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="app.js"></script>
+</body>
+</html>

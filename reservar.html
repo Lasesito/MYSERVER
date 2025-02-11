@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar - Golden Oak Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reservar.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <div class="logo-animation">
+          <img src="/angry-north-american-beaver-or-eurasian-beaver-biting-log-head-mascot-retro-vector.jpg" alt="Golden Oak Beaver Logo" class="beaver-logo">
+        </div>
+        <a href="index.html" style="text-decoration: none; color: inherit;">Golden Oak Camp</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="reservar-main">
+    <div class="reservar-container">
+      <h1 style="text-align: center; color: var(--secondary-color); margin-bottom: 2rem; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+        🌟 Realizar Reserva 🌟
+      </h1>
+      
+      <div id="plan-details" class="plan-details">
+        <!-- Plan details will be loaded here -->
+      </div>
+      
+      <form id="reserva-form" class="reserva-form">
+        <div class="form-group">
+          <label for="fecha" class="dates-label">✨ Fechas Exclusivas Verano 2025 ✨</label>
+          <div class="date-select-wrapper" style="position: relative;">
+            <select id="fecha" required>
+              <!-- Dates will be loaded dynamically -->
+            </select>
+            <div style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 1.5rem;">
+              🗓️
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="num-personas">👥 Número de Personas</label>
+          <input type="number" id="num-personas" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nombre">📝 Nombre completo</label>
+          <input type="text" id="nombre" required placeholder="Tu nombre completo">
+        </div>
+
+        <div class="form-group">
+          <label for="email">📧 Email</label>
+          <input type="email" id="email" required placeholder="tu@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">📞 Teléfono</label>
+          <input type="tel" id="telefono" required placeholder="+34 XXX XXX XXX">
+        </div>
+
+        <div class="resumen-reserva">
+          <h3>💫 Resumen de tu Aventura 💫</h3>
+          <div id="resumen-detalles"></div>
+          <div class="total">
+            <strong>Total a pagar: </strong>
+            <span id="precio-total">0€</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-confirmar">✨ Confirmar Mi Aventura ✨</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: info@goldenoak.com</p>
+        <p>Teléfono: +34 912 345 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Golden Oak Camp. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="reservar.js"></script>
+</body>
+</html>
